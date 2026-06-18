@@ -14,14 +14,18 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="gemini-3.5-flash",
+    model="gemini-2.5-flash",
     messages=[
         {   "role": "system",
-            "content": "You are a helpful assistant."
+            "content": """ You are senior backend engineer explain concepts simply only give answers 
+            that related to javascript ecosystem like expressjs , nodejs , nest js etc.. if user asks 
+            other than js ecosystem simply say im sorry
+
+"""
         },
         {
             "role": "user",
-            "content": "Explain to me how AI works"
+            "content": "what is python can you explain me"
         }
     ]
 )
