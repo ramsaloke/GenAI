@@ -26,11 +26,11 @@ def load_persona(persona: str):
     try:
 
         system_prompt_module = importlib.import_module(
-            f"app.personas.{persona}.system_prompt"
+            f"App.personas.{persona}.system_prompt"
         )
 
         examples_module = importlib.import_module(
-            f"app.personas.{persona}.examples"
+            f"App.personas.{persona}.examples"
         )
 
         return (
